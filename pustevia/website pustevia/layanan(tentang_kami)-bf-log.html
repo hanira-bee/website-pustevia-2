@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pustevia</title>
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&display=swap"
+        rel="stylesheet">
+    <!--feather icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--icon web-->
+    <link rel="shortcut icon" href="img/logo_pustevia.png" type="image/x-icon" />
+    <!--style css-->
+    <link rel="stylesheet" href="css/content_style.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index-bf-log.html">
+                <img src="img/logo_pustevia.png" alt="Pustevia" /><span class="logo-text">Pustevia</span>
+            </a>
+        </div>
+
+        <div class="navbar-nav">
+            <a href="index-bf-log.html">Beranda</a>
+            <a href="library-bf-log.html">Buku</a>
+            <a href="membership-bf-log.html">Membership</a>
+            <div class="trigger">
+                <span>Layanan <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"
+                        fill="none">
+                        <path d="M1 1L7 7L13 1" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></span>
+                <ul class="dropdown">
+                    <li><a href="#">Panduan Penggunaan</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Ketentuan & Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navbar-feather">
+            <div class="notifikasi-icon"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                    viewBox="0 0 35 35" fill="none">
+                    <path
+                        d="M17.0305 2.83984C14.3954 2.83984 11.8682 3.88664 10.0049 5.74995C8.14155 7.61326 7.09476 10.1404 7.09476 12.7756V17.7832C7.09496 18.0033 7.04394 18.2206 6.94572 18.4176L4.50863 23.2904C4.38958 23.5284 4.33337 23.793 4.34533 24.0589C4.35729 24.3248 4.43703 24.5832 4.57697 24.8096C4.71691 25.036 4.91241 25.2229 5.14489 25.3525C5.37738 25.4821 5.63914 25.5501 5.90531 25.5501H28.1556C28.4218 25.5501 28.6836 25.4821 28.9161 25.3525C29.1485 25.2229 29.344 25.036 29.484 24.8096C29.6239 24.5832 29.7037 24.3248 29.7156 24.0589C29.7276 23.793 29.6714 23.5284 29.5523 23.2904L27.1166 18.4176C27.0179 18.2207 26.9664 18.0035 26.9662 17.7832V12.7756C26.9662 10.1404 25.9194 7.61326 24.0561 5.74995C22.1928 3.88664 19.6656 2.83984 17.0305 2.83984ZM17.0305 29.8082C16.1495 29.8087 15.2901 29.5359 14.5707 29.0275C13.8513 28.519 13.3073 27.8 13.0136 26.9694H21.0473C20.7537 27.8 20.2097 28.519 19.4902 29.0275C18.7708 29.5359 17.9114 29.8087 17.0305 29.8082Z"
+                        fill="black" />
+                </svg></a>
+                <div class="notifikasi-feather">
+                    <div class="notifikasi">
+                        <div class="bel">
+                            <video class="video-bel" autoplay loop muted src="img/No Notification Animated 3D Icon.mp4"
+                                width="179px"></video>
+                        </div>
+                        <p>Tidak ada pemberitahuan notifikasi apapun, login untuk mendapatkan informasi terbaru dari
+                            pustevia </p>
+                        <a href="" class="btn">
+                            <button>Login</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="profile-icon">
+                <a href="profile.html" id="profile" alt="profile"><svg xmlns="http://www.w3.org/2000/svg" width="35"
+                        height="35" viewBox="0 0 35 35" fill="none">
+                        <path
+                            d="M17.6548 2.83984C9.81554 2.83984 3.46094 9.19444 3.46094 17.0337C3.46094 24.873 9.81554 31.2276 17.6548 31.2276C25.4941 31.2276 31.8487 24.873 31.8487 17.0337C31.8487 9.19444 25.4941 2.83984 17.6548 2.83984Z"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M6.6875 26.0394C6.6875 26.0394 9.85132 21.9998 17.658 21.9998C25.4646 21.9998 28.6298 26.0394 28.6298 26.0394M17.658 17.032C18.7873 17.032 19.8704 16.5833 20.6689 15.7848C21.4675 14.9862 21.9161 13.9031 21.9161 12.7738C21.9161 11.6445 21.4675 10.5614 20.6689 9.76281C19.8704 8.96425 18.7873 8.51562 17.658 8.51562C16.5286 8.51562 15.4455 8.96425 14.647 9.76281C13.8484 10.5614 13.3998 11.6445 13.3998 12.7738C13.3998 13.9031 13.8484 14.9862 14.647 15.7848C15.4455 16.5833 16.5286 17.032 17.658 17.032Z"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="aboutus">
+        <div class="aboutus-header">
+            <h1 class="au-head">
+                LEARN MORE ABOUT US
+            </h1>
+            <P class="au-head-title">
+                Our story, our book collections, and our member
+            </P>
+        </div>
+        <div class="our-story">
+            <h1 class="os-head">
+                Our Story
+            </h1>
+            <p class="os-title">
+                Pustevia hadir sebagai sebuah platform yang menggabungkan teknologi dan kecintaan terhadap ilmu
+                pengetahuan. Kami percaya bahwa akses terhadap pengetahuan seharusnya tidak menjadi hambatan, melainkan
+                jembatan. Itulah sebabnya kami membangun Pustevia bukan sekadar sebagai perpustakaan digital, tetapi
+                sebagai ruag tumbuh bagi mereka yang ingin terus belajar, berbagi dan berkembang.
+            </p>
+        </div>
+        <img src="img/e0de5167b5ba153c19a1c85e4c627042a3577d29.png" alt="" class="os-img">
+    </section>
+
+    <section class="our-book-collection">
+        <div class="obc-header">
+            <h1 class="obc-head">
+                Our book collections
+            </h1>
+        </div>
+        <div class="obc-box">
+            <div class="obc-collect">
+                <div class="obc-collect-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="127" height="127" viewBox="0 0 127 127" fill="none">
+                        <g filter="url(#filter0_d_1407_7322)">
+                            <path
+                                d="M79.375 43.4499V106.183C79.375 108.357 79.375 109.448 78.6765 109.818C77.978 110.188 77.0731 109.59 75.2634 108.384L64.9658 101.521C64.2567 101.044 63.9022 100.812 63.5 100.812C63.0978 100.812 62.7433 101.044 62.0342 101.521L49.0908 110.146C48.3817 110.622 48.0272 110.855 47.625 110.855C47.2228 110.855 46.8683 110.622 46.1592 110.146L33.2158 101.521C32.5067 101.044 32.1522 100.812 31.75 100.812C31.3478 100.812 30.9933 101.044 30.2842 101.521L19.9866 108.384C18.1769 109.59 17.272 110.194 16.5735 109.818C15.875 109.448 15.875 108.357 15.875 106.183V37.0417C15.875 27.0616 15.875 22.0768 18.9759 18.9759C22.0768 15.875 27.0616 15.875 37.0417 15.875H95.25L93.5143 17.0339C86.5928 21.6482 83.1321 23.9554 81.2535 27.4638C79.375 30.9721 79.375 35.1367 79.375 43.4499Z"
+                                fill="black" fill-opacity="0.25" />
+                            <path
+                                d="M79.375 31.75C79.375 27.5397 81.0475 23.5018 84.0247 20.5247C87.0018 17.5475 91.0397 15.875 95.25 15.875C99.4603 15.875 103.498 17.5475 106.475 20.5247C109.452 23.5018 111.125 27.5397 111.125 31.75V42.3333C111.125 43.7368 110.567 45.0827 109.575 46.0751C108.583 47.0675 107.237 47.625 105.833 47.625H82.0208C81.3191 47.625 80.6461 47.3462 80.1499 46.8501C79.6538 46.3539 79.375 45.6809 79.375 44.9792V31.75Z"
+                                fill="black" />
+                            <path d="M29.1055 50.2695H66.1471M29.1055 66.1445H50.2721M29.1055 82.0195H60.8555"
+                                stroke="black" stroke-linecap="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_1407_7322" x="-4" y="0" width="135" height="135"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="4" />
+                                <feGaussianBlur stdDeviation="2" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.0614316 0 0 0 0 0.0553934 0 0 0 0 0.0553934 0 0 0 0.25 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1407_7322" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1407_7322"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <p class="obc-title">
+                        20 paper
+                    </p>
+                </div>
+            </div>
+
+            <div class="obc-collect">
+                <div class="obc-collect-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="127" height="127" viewBox="0 0 127 127" fill="none">
+                        <path opacity="0.2"
+                            d="M103.188 15.875V95.25H35.7188C32.561 95.25 29.5326 96.5044 27.2998 98.7373C25.0669 100.97 23.8125 103.999 23.8125 107.156V27.7812C23.8125 24.6235 25.0669 21.5951 27.2998 19.3623C29.5326 17.1294 32.561 15.875 35.7188 15.875H103.188Z"
+                            fill="black" />
+                        <path
+                            d="M103.188 11.9062H35.7188C31.5084 11.9063 27.4706 13.5788 24.4934 16.5559C21.5163 19.5331 19.8438 23.5709 19.8438 27.7812V111.125C19.8438 112.178 20.2619 113.187 21.0062 113.931C21.7505 114.676 22.7599 115.094 23.8125 115.094H95.25C96.3026 115.094 97.312 114.676 98.0563 113.931C98.8006 113.187 99.2188 112.178 99.2188 111.125C99.2188 110.072 98.8006 109.063 98.0563 108.319C97.312 107.574 96.3026 107.156 95.25 107.156H27.7812C27.7812 105.051 28.6175 103.032 30.1061 101.544C31.5947 100.055 33.6136 99.2188 35.7188 99.2188H103.188C104.24 99.2188 105.25 98.8006 105.994 98.0563C106.738 97.312 107.156 96.3026 107.156 95.25V15.875C107.156 14.8224 106.738 13.813 105.994 13.0687C105.25 12.3244 104.24 11.9063 103.188 11.9062ZM99.2188 91.2812H35.7188C32.9314 91.277 30.1926 92.0113 27.7812 93.4095V27.7812C27.7812 25.6761 28.6175 23.6572 30.1061 22.1686C31.5947 20.68 33.6136 19.8438 35.7188 19.8438H99.2188V91.2812Z"
+                            fill="black" />
+                    </svg>
+                    <p class="obc-title">
+                        20 paper
+                    </p>
+                </div>
+            </div>
+
+            <div class="obc-collect">
+                <div class="obc-collect-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" fill="none">
+                        <path
+                            d="M27.9987 27.9987H65.332M27.9987 46.6654H83.9987M60.6654 65.332H83.9987M60.6654 83.9987H83.9987M9.33203 99.8654V12.132C9.33203 11.3894 9.62703 10.6772 10.1521 10.1521C10.6772 9.62703 11.3894 9.33203 12.132 9.33203H85.1747C85.9171 9.33268 86.6288 9.62811 87.1534 10.1534L101.844 24.844C102.105 25.1049 102.312 25.4148 102.453 25.756C102.594 26.0972 102.666 26.4629 102.665 26.832V99.8654C102.665 100.233 102.593 100.597 102.452 100.937C102.312 101.277 102.105 101.585 101.845 101.845C101.585 102.105 101.277 102.312 100.937 102.452C100.597 102.593 100.233 102.665 99.8654 102.665H12.132C11.7643 102.665 11.4002 102.593 11.0605 102.452C10.7208 102.312 10.4121 102.105 10.1521 101.845C9.89213 101.585 9.68588 101.277 9.54517 100.937C9.40445 100.597 9.33203 100.233 9.33203 99.8654Z"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M84 9.33203V25.1987C84 25.5664 84.0724 25.9305 84.2131 26.2702C84.3538 26.6099 84.5601 26.9186 84.8201 27.1786C85.0801 27.4386 85.3888 27.6448 85.7285 27.7856C86.0682 27.9263 86.4323 27.9987 86.8 27.9987H102.667M28 83.9987V65.332H42V83.9987H28Z"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="obc-title">
+                        20 paper
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="obc-header-side">
+            <h1 class="obc-head">
+                Our member
+            </h1>
+            <div class="obc-h-side-pp">
+                <img src="img/e0de5167b5ba153c19a1c85e4c627042a3577d29.png" alt="" class="obc-h-side-profile">
+                <p class="obc-h-side-pp-name">
+                    Alexa
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="navigate">
+            <div class="genre">
+                <h6>Baca Bersama Pustevia</h6>
+                <div class="subgenre">
+                    <a href="fiksi.html">Fiksi <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M12.5 21C7.8 21 4 17.2 4 12.5C4 7.8 7.8 4 12.5 4C17.2 4 21 7.8 21 12.5C21 17.2 17.2 21 12.5 21ZM12.5 5C8.35 5 5 8.35 5 12.5C5 16.65 8.35 20 12.5 20C16.65 20 20 16.65 20 12.5C20 8.35 16.65 5 12.5 5Z"
+                                fill="black" />
+                            <path
+                                d="M12.3484 17.3484L11.6484 16.6484L15.7984 12.4984L11.6484 8.34844L12.3484 7.64844L17.1984 12.4984L12.3484 17.3484Z"
+                                fill="black" />
+                            <path d="M8 12H16.5V13H8V12Z" fill="black" />
+                        </svg></a><br>
+                </div>
+                <div class="subgenre">
+                    <a href="non-fiksi.html">Non-Fiksi <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M12.5 21C7.8 21 4 17.2 4 12.5C4 7.8 7.8 4 12.5 4C17.2 4 21 7.8 21 12.5C21 17.2 17.2 21 12.5 21ZM12.5 5C8.35 5 5 8.35 5 12.5C5 16.65 8.35 20 12.5 20C16.65 20 20 16.65 20 12.5C20 8.35 16.65 5 12.5 5Z"
+                                fill="black" />
+                            <path
+                                d="M12.3484 17.3484L11.6484 16.6484L15.7984 12.4984L11.6484 8.34844L12.3484 7.64844L17.1984 12.4984L12.3484 17.3484Z"
+                                fill="black" />
+                            <path d="M8 12H16.5V13H8V12Z" fill="black" />
+                        </svg></a><br>
+                </div>
+                <div class="subgenre">
+                    <a href="social.html">Social <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M12.5 21C7.8 21 4 17.2 4 12.5C4 7.8 7.8 4 12.5 4C17.2 4 21 7.8 21 12.5C21 17.2 17.2 21 12.5 21ZM12.5 5C8.35 5 5 8.35 5 12.5C5 16.65 8.35 20 12.5 20C16.65 20 20 16.65 20 12.5C20 8.35 16.65 5 12.5 5Z"
+                                fill="black" />
+                            <path
+                                d="M12.3484 17.3484L11.6484 16.6484L15.7984 12.4984L11.6484 8.34844L12.3484 7.64844L17.1984 12.4984L12.3484 17.3484Z"
+                                fill="black" />
+                            <path d="M8 12H16.5V13H8V12Z" fill="black" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <div class="akses-cepat">
+                <h6>Akses Cepat</h6>
+                <div class="subnavigasi">
+                    <a href="tentang-kami.html">Tentang Kami</a><br>
+                </div>
+                <div class="subnavigasi">
+                    <a href="ketentuan-dan-privasi.html">Ketentuan dan Privasi</a><br>
+                </div>
+                <div class="subnavigasi">
+                    <a href="faq.html">FAQ</a><br>
+                </div>
+                <div class="subnavigasi">
+                    <a href="kontak.html">Kontak</a><br>
+                </div>
+            </div>
+
+            <div class="bergabung-membership">
+                <h6>Bergabung Bersama Kami</h6>
+                <div class="sub-mem">
+                    <a href="membership.html">Membership</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="socials">
+            <div class="sub-socials">
+                <div class="youtube">
+                    <a href="https://www.youtube.com"><svg xmlns="http://www.w3.org/2000/svg" width="62" height="62"
+                            viewBox="0 0 62 62" fill="none">
+                            <path d="M25.8359 21.957L41.3359 30.9987L25.8359 40.0404V21.957Z" fill="black" />
+                            <path
+                                d="M31 12.918C54.25 12.918 54.25 12.918 54.25 31.0013C54.25 49.0846 54.25 49.0846 31 49.0846C7.75 49.0846 7.75 49.0846 7.75 31.0013C7.75 12.918 7.75 12.918 31 12.918Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
+                </div>
+            </div>
+            <div class="sub-socials">
+                <div class="tweet">
+                    <a href="https://www.x.com"><svg xmlns="http://www.w3.org/2000/svg" width="47" height="47"
+                            viewBox="0 0 47 47" fill="none">
+                            <g clip-path="url(#clip0_308_252)">
+                                <mask id="mask0_308_252" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="47" height="47">
+                                    <path d="M0 0H47V47H0V0Z" fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_308_252)">
+                                    <path
+                                        d="M37.0125 2.20312H44.2203L28.4753 20.2444L47 44.7986H32.4971L21.1299 29.9096L8.13771 44.7986H0.923214L17.7626 25.495L0 2.20648H14.8721L25.1316 15.813L37.0125 2.20312ZM34.4779 40.4746H38.4729L12.69 6.3022H8.40629L34.4779 40.4746Z"
+                                        fill="black" />
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_308_252">
+                                    <rect width="47" height="47" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg></a>
+                </div>
+            </div>
+
+            <div class="sub-socials">
+                <div class="instagram">
+                    <a href="https://www.instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+                            viewBox="0 0 54 54" fill="none">
+                            <path
+                                d="M17.55 4.5H36.45C43.65 4.5 49.5 10.35 49.5 17.55V36.45C49.5 39.9111 48.1251 43.2304 45.6777 45.6777C43.2304 48.1251 39.9111 49.5 36.45 49.5H17.55C10.35 49.5 4.5 43.65 4.5 36.45V17.55C4.5 14.0889 5.87491 10.7696 8.32226 8.32226C10.7696 5.87491 14.0889 4.5 17.55 4.5ZM17.1 9C14.9517 9 12.8915 9.85339 11.3724 11.3724C9.85339 12.8915 9 14.9517 9 17.1V36.9C9 41.3775 12.6225 45 17.1 45H36.9C39.0483 45 41.1085 44.1466 42.6276 42.6276C44.1466 41.1085 45 39.0483 45 36.9V17.1C45 12.6225 41.3775 9 36.9 9H17.1ZM38.8125 12.375C39.5584 12.375 40.2738 12.6713 40.8012 13.1988C41.3287 13.7262 41.625 14.4416 41.625 15.1875C41.625 15.9334 41.3287 16.6488 40.8012 17.1762C40.2738 17.7037 39.5584 18 38.8125 18C38.0666 18 37.3512 17.7037 36.8238 17.1762C36.2963 16.6488 36 15.9334 36 15.1875C36 14.4416 36.2963 13.7262 36.8238 13.1988C37.3512 12.6713 38.0666 12.375 38.8125 12.375ZM27 15.75C29.9837 15.75 32.8452 16.9353 34.955 19.045C37.0647 21.1548 38.25 24.0163 38.25 27C38.25 29.9837 37.0647 32.8452 34.955 34.955C32.8452 37.0647 29.9837 38.25 27 38.25C24.0163 38.25 21.1548 37.0647 19.045 34.955C16.9353 32.8452 15.75 29.9837 15.75 27C15.75 24.0163 16.9353 21.1548 19.045 19.045C21.1548 16.9353 24.0163 15.75 27 15.75ZM27 20.25C25.2098 20.25 23.4929 20.9612 22.227 22.227C20.9612 23.4929 20.25 25.2098 20.25 27C20.25 28.7902 20.9612 30.5071 22.227 31.773C23.4929 33.0388 25.2098 33.75 27 33.75C28.7902 33.75 30.5071 33.0388 31.773 31.773C33.0388 30.5071 33.75 28.7902 33.75 27C33.75 25.2098 33.0388 23.4929 31.773 22.227C30.5071 20.9612 28.7902 20.25 27 20.25Z"
+                                fill="black" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="credit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z"
+                    stroke="black" stroke-width="1.5" />
+                <path
+                    d="M14 15.667C13.4559 15.8888 12.8736 16.002 12.286 16C9.919 16 8 14.21 8 12C8 9.79 9.919 8 12.286 8C12.896 8 13.475 8.119 14 8.333"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <p>2025 <span>Pustevia</span></p>
+        </div>
+
+    </footer>
+
+</body>

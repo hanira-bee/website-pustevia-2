@@ -1,0 +1,238 @@
+<?php
+session_start();
+
+// For demonstration, you can uncomment the below to simulate logged in or not
+// $_SESSION['logged_in'] = true; // simulate logged in
+// $_SESSION['logged_in'] = false; // simulate logged out
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Profile/Login Overlay</title>
+<style>
+  /* Basic Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+
+  /* Overlay Base */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .overlay.active {
+    display: flex;
+  }
+
+  .overlay-content {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 320px;
+    max-width: 90%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    position: relative;
+    text-align: center;
+  }
+
+  .overlay-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .overlay-content p {
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .close-btn:hover {
+    color: #333;
+  }
+
+  /* Login form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input[type="text"],
+  form input[type="password"] {
+    padding: 10px 12px;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+
+  form input[type="submit"] {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+
+  form input[type="submit"]:hover {
+    background: #218838;
+  }
+</style>
+</head>
+<body>
+
+<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) : ?>
+  <!-- Button to open profile overlay -->
+  <button id="openProfileBtn">Open Profile</button>
+
+  <!-- Profile Overlay -->
+  <div id="profileOverlay" class="overlay">
+    <div class="overlay-content">
+      <button class="close-btn" id="closeProfileBtn" aria-label="Close">&times;</button>
+      <h2>Your Profile</h2>
+      <p>Welcome back, <strong>User!</strong></p>
+      <p>Email: user@example.com</p>
+      <form method="post" action="">
+        <input type="hidden" name="logout" value="1" />
+        <input type="submit" value="Logout" />
+      </form>
+    </div>
+  </div>
+
+  <?php
+    // Handle logout logic
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
+      session_destroy();
+      header("Location: " . $_SERVER['PHP_SELF']);
+      exit;
+    }
+  ?>
+
+<?php else: ?>
+  <!-- Button to open login overlay -->
+  <button id="openLoginBtn">Login</button>
+
+  <!-- Login Overlay -->
+  <div id="loginOverlay" class="overlay">
+    <div class="overlay-content">
+      <button class="close-btn" id="closeLoginBtn" aria-label="Close">&times;</button>
+      <h2>Login</h2>
+      <form method="post" action="">
+        <input type="text" name="username" placeholder="Username" required autocomplete="username" />
+        <input type="password" name="password" placeholder="Password" required autocomplete="current-password" />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </div>
+
+  <?php
+    // Simple login simulation - replace with real validation in production
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['password'])) {
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+
+      // Dummy check: user is 'user' and password 'pass'
+      if ($username === 'user' && $password === 'pass') {
+        $_SESSION['logged_in'] = true;
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+      } else {
+        echo "<script>alert('Invalid credentials. Please try again.');</script>";
+      }
+    }
+  ?>
+
+<?php endif; ?>
+
+<script>
+  // JS to handle overlay toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const openProfileBtn = document.getElementById('openProfileBtn');
+    const closeProfileBtn = document.getElementById('closeProfileBtn');
+    const profileOverlay = document.getElementById('profileOverlay');
+
+    const openLoginBtn = document.getElementById('openLoginBtn');
+    const closeLoginBtn = document.getElementById('closeLoginBtn');
+    const loginOverlay = document.getElementById('loginOverlay');
+
+    if (openProfileBtn && closeProfileBtn && profileOverlay) {
+      openProfileBtn.addEventListener('click', () => {
+        profileOverlay.classList.add('active');
+      });
+      closeProfileBtn.addEventListener('click', () => {
+        profileOverlay.classList.remove('active');
+      });
+      profileOverlay.addEventListener('click', (e) => {
+        if(e.target === profileOverlay) {
+          profileOverlay.classList.remove('active');
+        }
+      });
+    }
+
+    if (openLoginBtn && closeLoginBtn && loginOverlay) {
+      openLoginBtn.addEventListener('click', () => {
+        loginOverlay.classList.add('active');
+      });
+      closeLoginBtn.addEventListener('click', () => {
+        loginOverlay.classList.remove('active');
+      });
+      loginOverlay.addEventListener('click', (e) => {
+        if(e.target === loginOverlay) {
+          loginOverlay.classList.remove('active');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
+
